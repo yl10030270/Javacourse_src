@@ -2,64 +2,30 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ca.bcit.cst.comp2526.assign1.a00811101;
+package ca.bcit.cst.comp2526.assign3.a00811101;
 
 
 /**
+ * A collection of tiles that make up a map.
  *
- * @author leon
+ * @author Leon
+ * @version 1.0
  */
-public class World
+public interface World
+    extends Rectangle
 {
     /**
-     *
+     * Initialize the tiles on the world.
      */
-    protected final MutableTile[][] tiles;
-    private int NumberOfRows;
-    private int NumberOfCols;
-
-    public World(int rows,
-                 int cols)
-    {
-        NumberOfRows = rows;
-        NumberOfCols = cols;
-        tiles = new MutableTile[rows][cols];
-    }
+    void init();
 
     /**
+     * Get the tile at the specified location.
      *
-     * @return
+     * @param location the location of the tile to get.
+     *
+     * @return the tile at the specified location.
      */
-    public int getNumberOfRows()
-    {
-        return NumberOfRows;
-    }
+    Tile getTileAt(Location location);
 
-    /**
-     *
-     * @return
-     */
-    public int getNumberOfCols()
-    {
-        return NumberOfCols;
-    }
-
-    /**
-     *
-     * @param location
-     * @return
-     */
-    public Tile getTileAt(Location location)
-    {
-        return tiles[location.getRow() + 1][location.getColumn() + 1];
-    }
-
-    /**
-     *
-     * @return
-     */
-    public Tile[][] getTiles()
-    {
-        return tiles;
-    }
 }
