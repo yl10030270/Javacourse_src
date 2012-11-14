@@ -1,0 +1,37 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ca.bcit.cst.comp2526.assign3.a00811101.worldreader.file;
+
+
+import ca.bcit.cst.comp2526.assign3.a00811101.InvalidWorldException;
+
+
+/**
+ *
+ * @author leon
+ */
+public class WorldDataException
+    extends InvalidWorldException
+{
+    /**
+     *
+     * @param msg
+     */
+    protected WorldDataException(String msg)
+    {
+        super(msg);
+    }
+
+    /**
+     *
+     * @param msg
+     * @param cause
+     */
+    protected WorldDataException(String msg,
+                                 Throwable cause)
+    {
+        super(msg, cause);
+    }
+}
