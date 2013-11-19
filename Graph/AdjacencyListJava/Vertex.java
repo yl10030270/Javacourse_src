@@ -12,10 +12,20 @@ interface Vertex extends Decorator {
     public int outdegree();
 
     public void increaseIndegree();
-    
+
     public void decreaseIndegree();
 
+    @SuppressWarnings("rawtypes")
     public Iterator getEdges();
 
+    @SuppressWarnings("rawtypes")
     public Iterator getAdjacentVertices();
+
+    public boolean isMarked();
+
+    public void setMarked(boolean marked);
+
+    public int getMarker();
+
+    public void setMarker(int marder);
 }

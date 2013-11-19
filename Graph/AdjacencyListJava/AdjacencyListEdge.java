@@ -37,7 +37,8 @@ class AdjacencyListEdge implements Edge
 	}
 
 	//decorator pattern attributes and methods
-	private final Map attributes_ = new HashMap();
+	@SuppressWarnings("rawtypes")
+    private final Map attributes_ = new HashMap();
 	
 	public boolean hasAttribute( Object key )
 	{
@@ -49,12 +50,14 @@ class AdjacencyListEdge implements Edge
 		return attributes_.get( key );
 	}
 	
-	public void setAttribute( Object key )
+	@SuppressWarnings("unchecked")
+    public void setAttribute( Object key )
 	{
 		attributes_.put( key, null );
 	}
 	
-	public void setAttribute( Object key, Object value )
+	@SuppressWarnings("unchecked")
+    public void setAttribute( Object key, Object value )
 	{
 		attributes_.put( key, value );
 	}
